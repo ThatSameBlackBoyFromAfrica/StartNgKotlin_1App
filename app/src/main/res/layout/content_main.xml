@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:background="@color/screenBackground"
+        tools:context=".MainActivity"
+        tools:showIn="@layout/activity_main">
+
+    <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="44dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/startng"/>
+
+    <androidx.cardview.widget.CardView
+            android:id="@+id/cardview1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="5dp"
+            android:foregroundGravity="fill"
+            app:cardElevation="4dp"
+            app:cardCornerRadius="8dp"
+            app:cardBackgroundColor="@color/screenBackground1"
+            app:layout_constraintBottom_toTopOf="@+id/cardview2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView">
+
+        <TextView
+                android:id="@+id/startng_detail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="StartNg Detail"
+                android:textAllCaps="true"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textColor="@color/colorPrimaryDark"
+                android:textIsSelectable="false"
+                android:textScaleX="0.8"
+                android:textSize="36sp"
+                android:textStyle="bold"/>
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+            android:id="@+id/cardview2"
+            android:layout_width="379dp"
+            android:layout_height="263dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="70dp"
+            android:layout_marginBottom="5dp"
+            app:cardBackgroundColor="@color/screenBackground1"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="1dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.366"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView"
+            app:layout_constraintVertical_bias="0.178">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintlayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+            <TextView
+                    android:id="@+id/name"
+                    android:layout_width="85dp"
+                    android:layout_height="37dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Name:"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="28sp"
+                    android:textStyle="normal|bold"
+                    app:layout_constraintEnd_toEndOf="@id/constraintlayout"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/constraintlayout"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+            <EditText
+                    android:id="@+id/editText"
+                    style="@style/Base.Widget.MaterialComponents.TextInputEditText"
+                    android:layout_width="263dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:ems="10"
+                    android:includeFontPadding="false"
+                    android:inputType="textPersonName"
+                    android:singleLine="true"
+                    android:text="Muofunanya Chukwuebuka C."
+                    android:textColor="@color/text_title"
+                    android:textColorHint="@color/text_title"
+                    android:textColorLink="@color/text_title"
+                    android:textStyle="bold|italic"
+                    app:layout_constraintEnd_toEndOf="@id/constraintlayout"
+                    app:layout_constraintHorizontal_bias="0.619"
+                    app:layout_constraintStart_toEndOf="@+id/name"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                    android:id="@+id/username"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="24dp"
+                    android:text="Username:"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="22sp"
+                    android:textStyle="normal|bold"
+                    app:layout_constraintEnd_toEndOf="@id/constraintlayout"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/constraintlayout"
+                    app:layout_constraintTop_toBottomOf="@+id/name"/>
+
+            <TextView
+                    android:id="@+id/Email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="24dp"
+                    android:text="Email:"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="24sp"
+                    android:textStyle="normal|bold"
+                    app:layout_constraintEnd_toEndOf="@id/constraintlayout"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/constraintlayout"
+                    app:layout_constraintTop_toBottomOf="@+id/username"/>
+
+            <EditText
+                    android:id="@+id/editText2"
+                    style="@style/Base.Widget.MaterialComponents.TextInputEditText"
+                    android:layout_width="264dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginEnd="1dp"
+                    android:ems="12"
+                    android:includeFontPadding="false"
+                    android:inputType="textPersonName"
+                    android:singleLine="true"
+                    android:text="ThatSameBlackBoyFromAfrica"
+                    android:textColor="@color/text_title"
+                    android:textColorHint="@color/text_title"
+                    android:textColorLink="@color/text_title"
+                    android:textStyle="bold|italic"
+                    app:layout_constraintEnd_toEndOf="@id/constraintlayout"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/username"
+                    app:layout_constraintTop_toBottomOf="@+id/editText"/>
+
+            <EditText
+                    android:id="@+id/editText3"
+                    style="@style/Base.Widget.MaterialComponents.TextInputEditText"
+                    android:layout_width="264dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:ems="12"
+                    android:includeFontPadding="false"
+                    android:inputType="textPersonName"
+                    android:singleLine="true"
+                    android:text="muofunanya3@gmail.com"
+                    android:textColor="@color/text_title"
+                    android:textColorHint="@color/text_title"
+                    android:textColorLink="@color/text_title"
+                    android:textStyle="bold|italic"
+                    app:layout_constraintEnd_toEndOf="@id/constraintlayout"
+                    app:layout_constraintHorizontal_bias="0.32"
+                    app:layout_constraintStart_toEndOf="@+id/Email"
+                    app:layout_constraintTop_toBottomOf="@+id/editText2"/>
+
+            <TextView
+                    android:id="@+id/track"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="24dp"
+                    android:text="Tracks:"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="24sp"
+                    android:textStyle="normal|bold"
+                    app:layout_constraintEnd_toEndOf="@id/constraintlayout"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/constraintlayout"
+                    app:layout_constraintTop_toBottomOf="@+id/Email"/>
+
+            <EditText
+                    android:id="@+id/editText4"
+                    style="@style/Base.Widget.MaterialComponents.TextInputEditText"
+                    android:layout_width="264dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:ems="12"
+                    android:includeFontPadding="false"
+                    android:inputType="textPersonName"
+                    android:singleLine="true"
+                    android:text="Mobile, Coding"
+                    android:textColor="@color/text_title"
+                    android:textColorHint="@color/text_title"
+                    android:textColorLink="@color/text_title"
+                    android:textStyle="bold|italic"
+                    app:layout_constraintEnd_toEndOf="@id/constraintlayout"
+                    app:layout_constraintHorizontal_bias="0.32"
+                    app:layout_constraintStart_toEndOf="@+id/track"
+                    app:layout_constraintTop_toBottomOf="@+id/editText3"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
